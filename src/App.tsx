@@ -11,7 +11,6 @@ export default function App() {
     if(target.tagName == 'DIV' || target.tagName == 'IMG') {
       setDropdownIsOpen(false)
       setIndex(0)
-      return 
     }
 
     if(!dropdownIsOpen) {
