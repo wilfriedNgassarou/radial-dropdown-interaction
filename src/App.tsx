@@ -27,6 +27,16 @@ export default function App() {
 
   return (
     <main>
+
+      <div className="credits">
+        <span>
+          Coded by <a href="https://x.com/Wilfried_Ng23" target="_blank">Wilfried Ngassarou</a>
+        </span>
+        <span>
+          Designed by <a href="https://x.com/EmaniUi" target="_blank">Emani UI</a>
+        </span>
+      </div>
+
       {/* utilisé pour masquer le texte quand on ferme le dropdown  */}
       <div className={`container ${dropdownIsOpen ? 'container-open' : ''}`}>
         <div className="button" onClick={handleClick}>

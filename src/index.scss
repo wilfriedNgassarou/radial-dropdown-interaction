@@ -14,6 +14,22 @@ main {
   width: 100%;
   height: 100dvh;
   overflow: hidden;
+  position: relative;
+}
+
+.credits {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  top: 50px;
+  width: 50%;
+
+  a {
+    color: #2e58d9;
+    text-decoration: none;
+  }
+
 }
 
 
