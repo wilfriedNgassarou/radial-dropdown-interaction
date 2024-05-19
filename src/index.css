@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  font-family: "Archivo", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.container-open {
+  width: 600px !important;
+  height: 600px !important;
+  transition: all 0.1s linear;
+  transition-delay: 0.5s;
+}
+.container-open .circle span {
+  transition: transform 1s cubic-bezier(0.4, 2.06, 0.63, 0.54) !important;
+}
+
+.container {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.button {
+  width: 179px;
+  height: 40px;
+  border-radius: 12px;
+  background-color: #046DF6;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.icons-container {
+  position: absolute;
+  left: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.icons-container .icons {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding-right: 10px;
+  align-items: center;
+}
+.icons-container .icons span {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(40px);
+  transition: transform 0.3s ease-out;
+}
+.icons-container .icons .icon-active {
+  transform: translateX(0);
+  transition: transform 0.6s cubic-bezier(0.4, 2.06, 0.63, 0.54);
+  transition-delay: 0.2s;
+}
+
+.circle {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+  right: 150px;
+  transition: transform 0.8s cubic-bezier(0.4, 2.06, 0.63, 0.54);
+}
+.circle .text-active {
+  --number-position: 195px ;
+  color: white;
+}
+.circle span {
+  --number-position: 500px ;
+  color: #8C8C8E;
+  font-weight: normal;
+  cursor: pointer;
+  font-size: 20px;
+  position: absolute;
+  transition: transform 0.6s linear;
+  width: 90px;
+  transform: translate(calc(cos(var(--number-angle)) * var(--number-position)), calc(sin(var(--number-angle)) * var(--number-position))) rotate(var(--angle));
+}
+.circle span:nth-of-type(1) {
+  --number-angle: calc(18*pi / 10);
+  --angle: 324deg;
+}
+.circle span:nth-of-type(2) {
+  --number-angle: calc(19*pi / 10);
+  --angle: 342deg;
+}
+.circle span:nth-of-type(3) {
+  --number-angle: 0;
+  --angle: 0;
+}
+.circle span:nth-of-type(4) {
+  --number-angle: calc(pi / 10);
+  --angle: 18deg;
+}
+.circle span:nth-of-type(5) {
+  --number-angle: calc(2*pi / 10);
+  --angle: 36deg;
+}
+
+.open span {
+  --number-position: 195px ;
+}
+
+/*# sourceMappingURL=index.css.map */
