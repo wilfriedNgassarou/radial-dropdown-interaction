@@ -7,17 +7,19 @@ export default function App() {
   function handleClick(e: MouseEvent<HTMLDivElement>) {
     const target = e.target as HTMLElement 
 
+    // si on clique sur le bouton bleu, on ferme le dropdown
     if(target.tagName == 'DIV' || target.tagName == 'IMG') {
       setDropdownIsOpen(false)
       setIndex(0)
+      return 
     }
 
     if(!dropdownIsOpen) {
       setDropdownIsOpen(true)
       return 
     }
-    if(target.tagName != 'SPAN') return 
 
+    if(target.tagName != 'SPAN') return 
 
     const index = +target.dataset.index! 
 
@@ -45,22 +47,22 @@ export default function App() {
           <div className="icons-container">
             <div className="icons">
               <span data-index="-2" className={`icon ${dropdownIsOpen && index == -2 ? 'icon-active' : ''}`}>
-                <img src="/public/svg/edit.png" alt="" />
+                <img src="/svg/edit.png" alt="" />
               </span>
               <span data-index="-1" className={`icon ${dropdownIsOpen && index == -1 ? 'icon-active' : ''}`}>
-                <img src="/public/svg/archive.png" alt="" />
+                <img src="/svg/archive.png" alt="" />
               </span>
               <span data-index="0" className={`icon ${dropdownIsOpen && index == 0 ? 'icon-active' : ''}`}>
-                <img src="/public/svg/document-download.png" alt="" />
+                <img src="/svg/document-download.png" alt="" />
               </span>
               <span data-index="1" className={`icon ${dropdownIsOpen && index == 1 ? 'icon-active' : ''}`}>
-                <img src="/public/svg/trash.png" alt="" />
+                <img src="/svg/trash.png" alt="" />
               </span>
               <span data-index="2" className={`icon ${dropdownIsOpen && index == 2 ? 'icon-active' : ''}`}>
-                <img src="/public/svg/close-circle.png" alt="" />
+                <img src="/svg/close-circle.png" alt="" />
               </span>
               <span data-index="0" className={`icon ${!dropdownIsOpen ? 'icon-active' : ''}`}>
-                <img src="/public/svg/arrow-up.png" alt="" />
+                <img src="/svg/arrow-up.png" alt="" />
               </span>
             </div>
           </div>
